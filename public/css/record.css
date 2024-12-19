@@ -1,0 +1,38 @@
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+body {
+    padding-top: 3%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: #6e6b6b;
+    font-weight: bold;
+}
+
+h1{
+   text-align:center;
+}
+#edit{
+    background-color: green;
+    color: #ddd;
+    padding: 3px;
+    border: none;
+}
+#delete{
+    background-color: red;
+    color: #ddd;
+    padding: 3px;
+    border: none;
+}

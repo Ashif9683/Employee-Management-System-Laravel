@@ -1,0 +1,158 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f7ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* Form container styling */
+.container {
+    margin-left: 220px; /* Add space to the left of the form to accommodate the navbar */
+    width: 50%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+/* Heading styling */
+h2 h3{
+    text-align:left;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Input fields hover and focus effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+    border-color: #5cb85c;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Button container styling */
+.button {
+    text-align:left;
+    margin-top: 20px;
+    /* background-color: #ec0927; */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    padding: 12px 30px;
+    background-color: #ec0927;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+input[type="submit"]:hover {
+    background-color: #f9f9f9;
+    color: #ec0927;
+    size: 14px;
+    font-weight: bold;
+  
+}
+
+header{
+    align-items:flex-end;
+    position: absolute;
+        right: 0px;
+        width: px;
+        border: 2px solid #73AD21;
+        padding: 10px;
+        /* background-color: #ec0927; */
+  
+}
+header button{
+    background-color: #ec0927;
+    color: #e6f7ff;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 15px;
+    /* position: absolute; */
+}
+
+#topbut {
+    position: fixed;  
+    top: 10px;         
+    right: 10px;       
+    display: flex;    
+    gap: 10px;      
+    border: #333;  
+   
+}
+
+/* Style the buttons */
+#topbut button {
+    padding: 10px 20px;
+    background-color: #ec0927;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: #333;
+}
+ img{
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+}
+
+#fsign{
+    color: #ec0927;
+    text-decoration: none;
+}
