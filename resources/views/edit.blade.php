@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Registration Form</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/form.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/edit.css') }}">
+
     
 </head>
 
@@ -12,23 +13,19 @@
 
 <body>
     
-   
-    <img id="img" src="{{ asset('img/garudalogo.png') }}" alt="Garuda logo">
-    <div  id="topbut" >
-        <button>sign in</button>
-        <button>sign up</button>
-    </div>
-  
-    
+
+
     <!-- Registration Form -->
     <div class="container">
         <h3>Update Data</h3>
-        <form action="{{ url('employee/update/'.$employee->employee_id) }}" method="POST">
+        <form action="{{ url('employee/update/'.$employee->id) }}" method="POST">
         
         @csrf
             @method('PUT')
             <!-- <label for="employee_id">Employee ID</label>
             <input type="text" id="employee_id" value="{{ $employee->employee_id}}" name="employee_id" required> -->
+
+           
 
             <label for="full_name">Full Name</label>
             <input type="text" id="full_name" value="{{ $employee->full_name}}" name="full_name" required>

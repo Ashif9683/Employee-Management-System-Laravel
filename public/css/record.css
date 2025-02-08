@@ -1,11 +1,17 @@
+.container{
+    border: 2px;
+}
+
 table {
-    width: 80%;
-    margin: 0 auto;
+    width: 95%;
+    margin: auto;
     border-collapse: collapse;
+    box-shadow: 0 10px 10px #353e8f;
 }
 
 body {
     padding-top: 3%;
+    background-color: #e6f7ff;
 }
 
 th,
@@ -17,22 +23,48 @@ td {
 }
 
 th {
-    background-color: #6e6b6b;
+    background-color:#151B54;
     font-weight: bold;
+    color: white;
 }
 
-h1{
+.container h1{
    text-align:center;
+  color:#151B54;
+   margin-left: 10px;
+   margin: 10px;
 }
+
 #edit{
     background-color: green;
     color: #ddd;
-    padding: 3px;
+    padding: 6px;
     border: none;
+    font-weight: bold;
 }
 #delete{
     background-color: red;
     color: #ddd;
-    padding: 3px;
+    padding: 6px;
     border: none;
+    font-weight: bold;
+}
+
+#addEmp{
+    margin: 15px 10px 10px 30px ;
+    padding: 10px;
+    align-self: center;
+    background-color: #151B54;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+
+
+#sucMsg{
+    color: red;
+    font-weight: bold;
+    font-size: 26px;
+    padding: 20px;
+    margin: auto;
 }

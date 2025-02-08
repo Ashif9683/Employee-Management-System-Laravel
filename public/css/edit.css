@@ -2,16 +2,13 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #e6f7ff;
     /* margin: 0; */
-    margin-left: 0px;
-    margin-top: 10px;
+    margin:auto;
+    /* margin-top: 10px; */
     padding: 0;
     display:inline-flex;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items:center; */
     height: 100vh;
-    margin: auto;
-  width: 90%;
-  padding: 10px;
 }
 
 
@@ -30,31 +27,33 @@ li a {
 
 /* Form container styling */
 .container {
-    margin-left: 0px;
-    width: 50%;
+    margin-left: 380px;
+    width: 500px;
     max-width: 600px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 20px 20px rgba(42, 57, 70, 0.5);
-    margin-top: 120px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
     place-items: center;
+    box-shadow: 0 10px 10px#333;
 }
 
 /* Heading styling */
-h2{
+h3{
     text-align:left;
-    margin-bottom: 25px;
-    color: #151B54;
+    margin-bottom: 30px;
+    color:#151B54;
     font-size: 32px;
     font-weight: bold;
+    box-shadow: #333;
 }
 
 /* Label styling */
 label {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #151B54;
     margin-bottom: 8px;
     display: block;
 }
@@ -64,7 +63,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="date"] {
-    width: 100%;
+    width: 400px;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -112,35 +111,3 @@ input[type="submit"]:hover {
   
 }
 
-#AllRecords{
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    margin: 30px;
-    background-color: #035c03;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border: none;
-    padding: 15px;
-}
-
-#img{
-    position: fixed;
-    /* background-color: #ffffff; */
-    left: 50px;
-    top: 30px;
-}
-
-.container label{
-    margin-left: 10px;
-    color: #065006;
-}
-
-#sucMsg{
-    color:red;
-    font-weight: bold;
-    font-size: 26px;
-    padding: 20px;
-    margin: auto;
-}

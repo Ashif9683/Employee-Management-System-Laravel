@@ -24,7 +24,7 @@ class EmployeeController extends Controller
         // Validate the input data
         $request->validate([
 
-            'employee_id' => 'required|unique:employees|alpha_num|max:10',
+            // 'employee_id' => 'required|unique:employees|alpha_num|max:10',
             'full_name' => 'required|string|max:255',
             'email' => 'required|email|unique:employees,email',
             'password' => 'required|string|min:8',
@@ -34,7 +34,7 @@ class EmployeeController extends Controller
 
         // Create a new employee record
         $employee = Employee::create([
-            'employee_id' => $request->employee_id,
+            // 'employee_id' => $request->employee_id,
             'full_name' => $request->full_name,
             'email' => $request->email,
             'password' => bcrypt($request->password), // Hash the password
@@ -42,9 +42,9 @@ class EmployeeController extends Controller
             'project' => $request->project,
         ]);
 
-        // return redirect('/employee/RegForm')->with('status',"Data Inserted");
-        return redirect()->back();
-        // return redirect()->back()->with(['Ashif', $employee]);
+        
+        return redirect()->back()->with('message','Data submitted successfully!');
+        
     }
 
     // 2 : Read opration
@@ -63,17 +63,17 @@ class EmployeeController extends Controller
     }
 
     // 3 : Delete opration
-    public function delete_records($employee_id)
+    public function delete_records($id)
     {
         logger('before delete controller function');
 
-        $record = Employee::SELECT('employee_id')
-                ->where('employee_id','=',$employee_id)
+        $record = Employee::SELECT('id')
+                ->where('id','=',$id)
                 ->delete();
 
         // DB::table('employees')->where('employee_id', $employee_id)->delete();
 
-        return redirect('/employee/records')->with('status', "Data deleted");
+        return redirect('/employee/records')->with('status', "Data deleted susseccfully !!");
         logger('After delete controller function');
     }
 
@@ -81,10 +81,10 @@ class EmployeeController extends Controller
     // 4 : Update opration
 
     // a :funtion to view the page to edit the data
-    public function edit($employee_id)
+    public function edit($id)
     {
         $employee = Employee::SELECT('*')
-                ->where('employee_id','=',$employee_id)
+                ->where('id','=',$id)
                 ->first();
         // $employee = DB::table('employees')->where('employee_id', $employee_id);
         logger("All data : ".$employee);
@@ -94,7 +94,7 @@ class EmployeeController extends Controller
 
     // b :funtion to Update the data
 
-    public function update(Request $request, $employee_id)
+    public function update(Request $request, $id)
 {
 
     $name = $request->input('full_name');
@@ -104,11 +104,12 @@ class EmployeeController extends Controller
     $data=array('full_name'=>$name,'email'=>$email, 'position'=>$position,'project'=>$project);
 
     DB::table('employees')
-            ->where('employee_id', $employee_id)
+            ->where('id', $id)
             ->update($data);
 
     // $employee->save();
-    return redirect('/employee/records')->with('success', 'employee updated successfully');
+    
+    return redirect('/employee/records')->with('status', "Data updated susseccfully !!");
 }
 
 }
